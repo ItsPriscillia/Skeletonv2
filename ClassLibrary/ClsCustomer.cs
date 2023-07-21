@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 
 namespace ClassLibrary
+
 {
-    public class clsCustomer
+    public class ClsCustomer
     {
         private Int32 mCustomerID;
         private Boolean mActive;
@@ -14,6 +15,7 @@ namespace ClassLibrary
         private string mPostcode;
         private string mEmail;
         private DateTime mDOB;
+
         public bool Active
         {
             get
@@ -130,3 +132,4 @@ namespace ClassLibrary
 
     }
 }
+    

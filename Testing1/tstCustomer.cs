@@ -1,24 +1,25 @@
-﻿using System;
-using ClassLibrary;
+﻿using ClassLibrary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
-namespace Testing1
+namespace Test_Framework
 {
     [TestClass]
-    public class tstCustomer
-    {
-        //good test data
-        string Firstname = "Ruth";
-        String Lastname = "Ezee";
-        String Email = "Ezze@gmail.cpm";
-        String Postcode = "SE2 Gn66";
-        String DOB = DateTime.Now.Date.ToString("01/07/2002");
+    public class tstCutomer
+    { 
+    //good test data
+         string Firstname = "Ruth";
+         String Lastname = "Ezee";
+         String Email = "Ezze@gmail.cpm";
+         String Postcode = "SE2 Gn66";
+         String DOB = DateTime.Now.Date.ToString("01/07/2002");
 
-
+    
         [TestMethod]
         public void InstanceOK()
+
         {
-            clsCustomer AnCustomer = new clsCustomer();
+            ClsCustomer AnCustomer = new ClsCustomer();
             Assert.IsNotNull(AnCustomer);
         }
 
@@ -104,7 +105,7 @@ namespace Testing1
         }
 
         [TestMethod]
-        public void TestCustomerIDNotFound()
+        public void TestCustomerIDFound()
         {
             clsCustomer AnCustomer = new clsCustomer();
             Boolean Found = false;
@@ -203,13 +204,16 @@ namespace Testing1
         }
         [TestMethod]
         public void ValidMethodOK()
-        {
+       {
             clsCustomer AnCustomer = new clsCustomer();
             String Error = "";
             Error = AnCustomer.Valid(Firstname, Lastname, Email, Postcode, DOB);
-            Assert.AreEqual(Error, "");
+           Assert.AreEqual(Error, "");
         }
 
     }
 }
+    
+    
+
 

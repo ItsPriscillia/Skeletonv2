@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -34,3 +35,27 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+
+namespace ClassLibrary
+{
+    public class clsCustomer
+    {
+        public string Firstname { get; set; }
+        public bool Active { get; set; }
+        public DateTime DOB { get; set; }
+        public int CustomerID { get; set; }
+        public string Lastname { get; set; }
+        public string Email { get; set; }
+        public string Postcode { get; set; }
+
+        public bool Find(int customerID)
+        {
+            return true;
+        }
+
+        public string Valid(string firstname, string lastname, string email, string postcode, string dOB)
+        {
+            return"";
+        }
+    }
+}
